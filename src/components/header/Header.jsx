@@ -4,11 +4,11 @@ import './header.css'
 import { AppContext } from '../context/AppContext'
 
 export const Header = () => {
-    const brandName=useContext(AppContext)
+    const value = useContext(AppContext)
     return (
         <>
             <NavLink to='/' className='header-brand max-width'>
-                <div className='header-brand-name'>{brandName} ElectroniX</div>
+                <div className='header-brand-name'>{value} ElectroniX</div>
             </NavLink>
         </>
     )
