@@ -1,0 +1,23 @@
+.error-page{
+    padding: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+
+.error-home-btn{
+    margin: 2rem auto;
+    width: 8rem;
+    font-size: 1.5rem;
+    height: 3rem;
+    background-color: rgb(229, 229, 229);
+    border: 1px solid rgb(214, 212, 212);
+    box-shadow: rgba(28, 28, 28, 0.3) 0px 2px 8px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.error-home-btn:hover{
+    background-color: rgb(184, 183, 183);
+}

@@ -1,0 +1,37 @@
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.contact-form {
+    margin: 2rem auto;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-fields input {
+    width: 20rem;
+    height: 2rem;
+    box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
+    border: 1px solid rgb(214, 212, 212);
+    outline: none;
+}
+
+.input-fields textarea {
+    box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
+    border: 1px solid rgb(214, 212, 212);
+    outline: none;
+}
+
+.contact-submit-btn:hover{
+    background-color:  rgb(214, 212, 212);
+}
