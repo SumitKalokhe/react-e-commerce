@@ -9,7 +9,6 @@ import ErrorPage from './components/errorpage/ErrorPage'
 import { Header } from './components/header/Header'
 import { Navbar } from './components/header/navbar'
 import { About } from './components/about/about'
-import { Products } from './components/products/products'
 import { Contact } from './components/contact/Contact'
 import {Cart} from './cart'
 
@@ -25,7 +24,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About/>}/>
-        <Route path='/products' element={<Products/>}/>
         <Route path='/contactus' element={<Contact/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/homeappliances' element={<HomeAppliances />} />
