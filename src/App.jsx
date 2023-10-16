@@ -11,6 +11,7 @@ import { Navbar } from './components/header/navbar'
 import { About } from './components/about/about'
 import { Contact } from './components/contact/Contact'
 import {Cart} from './cart'
+import { SingleProductPage } from './singleproductpage/SingleProductPage'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <Route path='/audio' element={<Audio />} />
         <Route path='/laptops' element={<Laptops />} />
         <Route path='/smartphones' element={<Smartphone />} />
+        <Route path='/singleproduct/:id' element={<SingleProductPage/>}/>
         <Route path='*' element={<ErrorPage />} />
       </Routes>
     </Router>

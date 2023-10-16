@@ -40,7 +40,7 @@ export const AppContextProvider = ({ children }) => {
         getProducts(API)
     }, [])
 
-    return <AppContext.Provider value={state}>
+    return <AppContext.Provider value={{...state}}>
         {children}
     </AppContext.Provider>
 
