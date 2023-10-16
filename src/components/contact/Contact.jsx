@@ -6,7 +6,7 @@ export const Contact = () => {
     <div className='max-width contact-section'>
       <h1 className='contact-heading'>Contact us</h1>
       <div className='contact-form'>
-        <form className='input-fields' action="mailto:sumitkalokhe1111@gmail.com" method="post" enctype="text/plain">
+        <form className='input-fields' action="mailto:sumitkalokhe1111@gmail.com" method="post" encType="text/plain">
 
           <input type="text" placeholder='Name' name="Name:" autoComplete='off' required/>
 
