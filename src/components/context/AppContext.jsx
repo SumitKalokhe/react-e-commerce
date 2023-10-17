@@ -5,7 +5,10 @@ export const AppContext = createContext();
 
 const API = 'https://api.pujakaitem.com/api/products'
 
-const initialState = { products: [] };
+const initialState = {
+    products: [],
+    singleProduct: {}
+};
 
 export const AppContextProvider = ({ children }) => {
 
@@ -16,6 +19,11 @@ export const AppContextProvider = ({ children }) => {
                 return {
                     ...state,
                     products: action.payload
+                }
+            case "SET_SINGLE_PRODUCT":
+                return {
+                    ...state,
+                    singleProduct: action.payload
                 }
 
             default:
@@ -36,11 +44,22 @@ export const AppContextProvider = ({ children }) => {
         }
     }
 
+    const getSingleProduct = async (url) => {
+
+        try {
+            const res = await axios.get(url);
+            const singleProduct = res.data;
+            dispatch({ type: "SET_SINGLE_PRODUCT", payload: singleProduct });
+        } catch (error) {
+            console.error("Error fetching data: ", error);
+        }
+    }
+
     useEffect(() => {
         getProducts(API)
     }, [])
 
-    return <AppContext.Provider value={{...state}}>
+    return <AppContext.Provider value={{ ...state, getSingleProduct }}>
         {children}
     </AppContext.Provider>
 
