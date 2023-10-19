@@ -22,12 +22,12 @@
     color: black;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    background-color: rgba(225, 238, 250, 0.749);
+    background-color: rgba(231, 240, 248, 0.6);
 }
 
 .product-card:hover{
     border: 1px solid rgb(238, 237, 237);
-    box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
+    box-shadow: rgba(28, 28, 28, 0.1) 0px 2px 8px;
 }
 
 .product-image-category {
