@@ -1,0 +1,54 @@
+.spp-inc-dec {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 8rem;
+}
+
+.spp-add-to-cart {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.spp-add-to-cart-increment {
+    font-size: 1rem;
+    border: 1px solid rgb(230, 228, 228);
+    width: 1.4rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 8px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
+.spp-add-to-cart-decrement {
+    font-size: 1rem;
+    border: 1px solid rgb(230, 228, 228);
+    width: 1.4rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 8px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
+.spp-add-to-cart-button {
+    background-color: rgba(179, 107, 246, 0.616);
+    border: 1px solid rgba(174, 93, 250, 0.616);
+    font-size: 0.8rem;
+    width: 6rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.spp-add-to-cart-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 8px;
+    background-color: rgba(153, 47, 251, 0.616);
+}
