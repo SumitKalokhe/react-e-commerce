@@ -1,25 +1,32 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './addtocart.css'
-const AddtoCart = ({ stock }) => {
+import { CartContext } from '../components/context/CartContext'
 
-  const [quanity, setQuantity] = useState(1)
+const AddtoCart = ({ stock, singleProduct }) => {
 
-  const increment=()=>{
-    quanity< stock ? setQuantity(quanity+1) : setQuantity(stock)
+  const {addToCart}= useContext(CartContext)
+
+  const { id, name, price } = singleProduct
+
+  const [quantity, setQuantity] = useState(1)
+
+  const increment = () => {
+    quantity < stock ? setQuantity(quantity + 1) : setQuantity(stock)
   }
-  const decrement=()=>{
-    quanity > 1 ? setQuantity(quanity-1) : setQuantity(1)
+  const decrement = () => {
+    quantity > 1 ? setQuantity(quantity - 1) : setQuantity(1)
   }
+
 
   return (
     <div className='spp-inc-dec'>
       <div className='spp-add-to-cart'>
         {/* <div className='spp-add-to-cart-increment' onClick={()=> increment()}>+</div> */}
         <div className='spp-add-to-cart-increment' onClick={increment}>+</div>
-        <div className='spp-quantity'>{quanity}</div>
-        <div className='spp-add-to-cart-decrement' onClick={()=> decrement()}>-</div>
+        <div className='spp-quantity'>{quantity}</div>
+        <div className='spp-add-to-cart-decrement' onClick={() => decrement()}>-</div>
       </div>
-      <div className='spp-add-to-cart-button'>Add to Cart</div>
+      <div className='spp-add-to-cart-button' onClick={() => addToCart(id, name, price, quantity, singleProduct)}>Add to Cart</div>
     </div>
   )
 }
