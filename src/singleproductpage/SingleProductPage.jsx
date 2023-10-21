@@ -28,7 +28,7 @@ export const SingleProductPage = () => {
         <p className='single-product-availability'>Available: {singleProduct && (singleProduct.stock > 0 ? "In Stock" : "Out of Stock")}</p>
         <p className='single-product-id'>ID: {singleProduct && singleProduct.id}</p>
         <p className='single-product-brand'>Brand: {singleProduct && singleProduct.company}</p>
-        <AddtoCart stock={singleProduct.stock}/>
+        <AddtoCart stock={singleProduct.stock} singleProduct={singleProduct}/>
       </div>
     </div>
   )
