@@ -1,11 +1,15 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import './navbar.css'
+import { CartContext } from '../context/CartContext'
 
 
 export const Navbar = () => {
 
+    const {cartItemTotal}= useContext(CartContext)
+
     const [mobileMenu, setMobileMenu] = useState(false)
+    
     return (
         <>
             <div className='max-width'>
@@ -23,7 +27,7 @@ export const Navbar = () => {
                         <NavLink to="/contactus" className="text-dec-none" onClick={()=>setMobileMenu(!mobileMenu)}>Contact Us</NavLink>
                     </li>
                     <li className='navbar-link' >
-                        <NavLink to="/cart" className="text-dec-none  shopping-cart" onClick={()=>setMobileMenu(!mobileMenu)}><i className="fi fi-rr-shopping-cart"></i><div className='cart-total'>10</div></NavLink>
+                        <NavLink to="/cart" className="text-dec-none  shopping-cart" onClick={()=>setMobileMenu(!mobileMenu)}><i className="fi fi-rr-shopping-cart"></i><div className='cart-total'>{cartItemTotal}</div></NavLink>
 
                     </li>
                 </ul>
