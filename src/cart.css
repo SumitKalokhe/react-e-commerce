@@ -1,0 +1,14 @@
+.cart-layout-main{
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+.cart-layout{
+    padding-bottom:1rem ;
+    border-bottom: 1px solid rgb(232, 232, 232);
+}
+
+.cart-table-name{
+    display: flex;
+    justify-content: center;
+}
