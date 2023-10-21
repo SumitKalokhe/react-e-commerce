@@ -10,7 +10,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     gap: 1rem;
 }
@@ -51,4 +51,9 @@
 .spp-add-to-cart-button:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 8px;
     background-color: rgba(153, 47, 251, 0.616);
+}
+
+.spp-add-to-cart-increment:hover,
+.spp-add-to-cart-decrement:hover{
+ background-color: rgb(212, 212, 212);
 }

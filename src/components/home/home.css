@@ -1,8 +1,31 @@
-.product-page{
-    padding: 4rem 18%;
+.home-page-layout{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+}
+
+.product-page{
+    max-width: 80%;
+    padding: 4rem 2%;
+    display: flex;
+    margin-right: 3rem;
+    flex-direction: row;
+    gap: 90px;
     flex-wrap: wrap;
     background-color: white;
+    margin-left: 5%;
+    align-items: flex-start;
+}
+.home-category-filter{
+    width: 7%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 10rem;
+    margin-top: 5rem;
+}
+
+.home-category-filter h4{
+    margin: 0;
+    border-bottom: 1px solid rgb(180, 178, 178);
 }
