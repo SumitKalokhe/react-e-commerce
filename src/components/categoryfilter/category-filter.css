@@ -12,3 +12,6 @@
     cursor: pointer;
 }
 
+.category-filter div:hover{
+    color: blueviolet;
+}
