@@ -11,7 +11,7 @@ export const Cart = () => {
 
   return (
     <>
-      <div className='cart-table cart-layout-main' style={{marginTop: "3rem", fontSize:"1rem"}}>
+      <div className='cart-table cart-layout-main'>
         <div className='cart-layout'>
           <div className='sp-cart-layout'>
             <div className='cart-table-name cart-product-name'>
