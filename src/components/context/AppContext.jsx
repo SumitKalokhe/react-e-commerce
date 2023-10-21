@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 import axios from "axios";
 
 export const AppContext = createContext();
@@ -12,6 +12,9 @@ const initialState = {
 
 export const AppContextProvider = ({ children }) => {
 
+    const [filter, setFilter]= useState('all')
+
+    // console.log(filter);
     const reducer = (state, action) => {
 
         switch (action.type) {
@@ -29,6 +32,7 @@ export const AppContextProvider = ({ children }) => {
             default:
                 return state;
         }
+
     }
 
     const [state, dispatch] = useReducer(reducer, initialState)
@@ -49,7 +53,7 @@ export const AppContextProvider = ({ children }) => {
         try {
             const res = await axios.get(url);
             const singleProduct = res.data;
-            dispatch({ type: "SET_SINGLE_PRODUCT", payload: singleProduct });
+            dispatch({ type: "SET_SINGLE_PRODUCT", payload: singleProduct});
         } catch (error) {
             console.error("Error fetching data: ", error);
         }
@@ -59,7 +63,7 @@ export const AppContextProvider = ({ children }) => {
         getProducts(API)
     }, [])
 
-    return <AppContext.Provider value={{ ...state, getSingleProduct }}>
+    return <AppContext.Provider value={{ ...state, getSingleProduct, filter, setFilter }}>
         {children}
     </AppContext.Provider>
 
