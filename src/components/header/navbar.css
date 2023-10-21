@@ -66,13 +66,16 @@
 }
 
 .cart-total {
+    width: 0.8rem;
+    height: 0.8rem;
     background-color: blueviolet;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     border-radius: 100%;
     color: white;
-    padding: 3px;
+    padding: 2px;
     margin-right: 1rem;
     position: absolute;
     left: 0.6rem;
     bottom: 1rem;
+    text-align: center;
 }
