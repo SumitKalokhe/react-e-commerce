@@ -7,9 +7,11 @@ export const Cart = () => {
 
   const { cart } = useContext(CartContext)
 
-  console.log(cart);
+  // console.log("this is cart",cart);
 
-  return (
+  if (cart.length === 0) {
+    return <div style={{ width: "100%", margin: "5rem 0", textAlign: "center" }}>No items in cart</div>
+  } else return (
     <>
       <div className='cart-table cart-layout-main'>
         <div className='cart-layout'>
@@ -19,6 +21,7 @@ export const Cart = () => {
             </div>
             <div className='cart-table-quantity cart-product-quantity'>Quantity</div>
             <div className='cart-table-price cart-product-price'>Price</div>
+            <div className='cart-table-remove '>Remove</div>
           </div>
         </div>
 
@@ -27,7 +30,7 @@ export const Cart = () => {
         {cart.map((items) => {
           return (
             <div className="cart-layout-main" key={items.id}>
-              <CartLayout item={items} />
+              <CartLayout item={items } />
             </div>
           );
         })}
