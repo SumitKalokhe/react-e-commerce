@@ -5,9 +5,17 @@ import './cart.css'
 
 export const Cart = () => {
 
-  const { cart } = useContext(CartContext)
 
-  // console.log("this is cart",cart);
+
+  const { cart, shipping_fee, total_price } = useContext(CartContext)
+
+  console.log('total price is ',total_price);
+
+  const totalPrice=Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 2 }).format(total_price/ 100) 
+  
+  const shippingfee=Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 2 }).format(shipping_fee*100 / 100) 
+
+  const orderTotal=Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 2 }).format(shipping_fee+ total_price / 100)
 
   if (cart.length === 0) {
     return <div style={{ width: "100%", margin: "5rem 0", textAlign: "center" }}>No items in cart</div>
@@ -19,7 +27,7 @@ export const Cart = () => {
             <div className='cart-table-name cart-product-name'>
               <div>Name</div>
             </div>
-            <div className='cart-table-quantity cart-product-quantity'>Quantity</div>
+            <div className='cart-table-quantity'>Quantity</div>
             <div className='cart-table-price cart-product-price'>Price</div>
             <div className='cart-table-remove '>Remove</div>
           </div>
@@ -30,10 +38,15 @@ export const Cart = () => {
         {cart.map((items) => {
           return (
             <div className="cart-layout-main" key={items.id}>
-              <CartLayout item={items } />
+              <CartLayout item={items} />
             </div>
           );
         })}
+      </div>
+      <div className='final-price'>
+        <div className='subtotal'>Subtotal: <p>{totalPrice}</p></div>
+        <div className='shipping-fee'>Shipping Fees: <p>{shippingfee}</p></div>
+        <div className='order-total-price'>Order Total: <p>{orderTotal}</p></div>
       </div>
     </>
   )
