@@ -16,7 +16,7 @@ const CartLayout = ({ item }) => {
         <div className='cart-layout'>
             <div className='sp-cart-layout'>
                 <div className='cart-product-name'><div className='cart-product-image-div'><img className='cart-product-image' src={image} alt="" /></div>{name}</div>
-                <div style={{ display: "flex", flexDirection: "row", gap: "1rem", justifyContent: "center", alignItems: "center" }}>
+                <div className='cart-product-qantity-inc-dec' style={{ display: "flex", flexDirection: "row", gap: "1rem", justifyContent: "center", alignItems: "center" }}>
                     <div style={{ cursor: "pointer", fontSize: "1rem", width: "1rem", border:"1.5px solid rgb(250, 228, 228)", borderRadius:"2px" }} onClick={() => cartQuantityIncrement(id)}>+</div>
                     <div className='cart-product-quantity'>{quantity}</div>  {/* add quantity increment decremnt buttons */}
                     <div style={{ cursor: "pointer", fontSize: "1rem", width: "1rem", border:"1.5px solid rgb(250, 228, 228)", borderRadius:"2px" }} onClick={() => cartQuantityDecrement(id)}>-</div>

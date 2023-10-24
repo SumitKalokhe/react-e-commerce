@@ -4,24 +4,27 @@ import { AppContext } from '../context/AppContext'
 
 const CategoryFilter = () => {
 
-    const {filter, setFilter}= useContext(AppContext)
+  const { filter, setFilter } = useContext(AppContext)
 
-    const putFilter=(categoryFilter)=>{
+  const putFilter = (categoryFilter) => {
 
-        setFilter(categoryFilter)
+    setFilter(categoryFilter)
 
-        return
-    }
+    return
+  }
 
   return (
-    <div className='category-filter'>
-        <div onClick={()=>putFilter("all") }>All</div>
-        <div onClick={()=>putFilter("mobile") }>Mobile</div>
-        <div onClick={()=>putFilter("laptop") }>Laptop</div>
-        <div onClick={()=>putFilter("computer") }>Computer</div>
-        <div onClick={()=>putFilter("accessories") }>Accessories</div>
-        <div onClick={()=>putFilter("watch") }>Watch</div>
-    </div>
+    <>
+      <div className='category-filter'>
+        <div onClick={() => putFilter("all")}>All</div>
+        <div onClick={() => putFilter("mobile")}>Mobile</div>
+        <div onClick={() => putFilter("laptop")}>Laptop</div>
+        <div onClick={() => putFilter("computer")}>Computer</div>
+        <div onClick={() => putFilter("accessories")}>Accessories</div>
+        <div onClick={() => putFilter("watch")}>Watch</div>
+      </div>
+      
+    </>
   )
 }
 
