@@ -7,7 +7,7 @@ import Laptops from './components/laptops/Laptops'
 import Smartphone from './components/smartphones/Smartphone'
 import ErrorPage from './components/errorpage/ErrorPage'
 import { Header } from './components/header/Header'
-import { Navbar } from './components/header/navbar'
+import { Navbar } from './components/header/Navbar'
 import { About } from './components/about/about'
 import { Contact } from './components/contact/Contact'
 import {Cart} from './cart'
@@ -27,10 +27,6 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/contactus' element={<Contact/>}/>
         <Route path='/cart' element={<Cart/>}/>
-        <Route path='/homeappliances' element={<HomeAppliances />} />
-        <Route path='/audio' element={<Audio />} />
-        <Route path='/laptops' element={<Laptops />} />
-        <Route path='/smartphones' element={<Smartphone />} />
         <Route path='/singleproduct/:id' element={<SingleProductPage/>}/>
         <Route path='*' element={<ErrorPage />} />
       </Routes>
