@@ -21,7 +21,7 @@ export const Navbar = () => {
                         <NavLink to="/about" className="text-dec-none" onClick={()=>setMobileMenu(!mobileMenu)}>About</NavLink>
                     </li>
                     <li className='navbar-link' >
-                        <NavLink to="/products" className="text-dec-none" onClick={()=>setMobileMenu(!mobileMenu)}>Products</NavLink>
+                        <NavLink to="/" className="text-dec-none" onClick={()=>setMobileMenu(!mobileMenu)}>Products</NavLink>
                     </li>
                     <li className='navbar-link' >
                         <NavLink to="/contactus" className="text-dec-none" onClick={()=>setMobileMenu(!mobileMenu)}>Contact Us</NavLink>
