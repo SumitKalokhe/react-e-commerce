@@ -9,8 +9,6 @@ export const Cart = () => {
 
   const { cart, shipping_fee, total_price } = useContext(CartContext)
 
-  console.log('total price is ',total_price);
-
   const totalPrice=Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 2 }).format(total_price/ 100) 
   
   const shippingfee=Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 2 }).format(shipping_fee*100 / 100) 

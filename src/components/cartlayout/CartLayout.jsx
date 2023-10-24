@@ -6,8 +6,6 @@ const CartLayout = ({ item }) => {
 
     const { id, name, price, quantity, singleProduct } = item
 
-    // const [newQuantity, setNewQuantity] = useState(quantity)
-
     const { removeCartItem, cartQuantityIncrement, cartQuantityDecrement } = useContext(CartContext)
 
     const image = (singleProduct && singleProduct.image[0].url);
