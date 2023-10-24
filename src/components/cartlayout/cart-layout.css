@@ -47,3 +47,21 @@
     font-size: 1rem;
     color: rgb(0, 0, 0);
 }
+
+@media (max-width: 950px) {
+
+    .cart-product-qantity-inc-dec{
+        margin-right: 20px;
+    }
+    
+    .cart-product-remove{
+        margin-right: 55px;
+
+    }
+ 
+    .cart-product-name{
+        display: flex;
+        max-width: 30%;
+        flex-direction: column-reverse;
+    }
+}
